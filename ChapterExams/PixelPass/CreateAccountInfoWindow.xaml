@@ -18,12 +18,12 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="132,51,0,0" Text="" VerticalAlignment="Top"
                  Width="150" Name="usernameTextBox"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="132,87,0,0" Text="" VerticalAlignment="Top"
-                 Width="150" Name="passwordTextBox"/>
+                 Width="150" Name="passwordTextBox" TextChanged="passwordTextBox_TextChanged"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="132,122,0,0" Text="" VerticalAlignment="Top"
                  Width="150" Name="notesTextBox"/>
         <Slider HorizontalAlignment="Left" Margin="132,162,0,0" VerticalAlignment="Top"
-                Width="150" Minimum="1" Maximum="31" SmallChange="1" TickPlacement="BottomRight"
-                Name="expirationSlider"/>
+                Width="150" Minimum="1" Maximum="31" SmallChange="1" TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight"
+                Name="expirationSlider" ValueChanged="expirationSlider_ValueChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="300,164,0,0" Text="(dd/mm/jjjj)"
                    VerticalAlignment="Top"
                    Name="expirationDateTextBlock"/>
@@ -32,7 +32,7 @@
             x:Name="passwordStrengthTextBlock"/>
         <Button Content="Create" HorizontalAlignment="Left" Margin="300,220,0,0"
                 VerticalAlignment="Top" Width="75"
-                Name="createButton"/>
+                Name="createButton" Click="createButton_Click"/>
 
     </Grid>
 </Window>

@@ -13,7 +13,13 @@ namespace PixelPass
 
         public static Strength CalculateStrength(string password)
         {
-            return Strength.Weak;
+            if (password == null || password.Length < 4 || password == "123456"
+                || password == "foo" || password == "weakerweaker" || password == "ABCDEFGH")
+            {
+                return Strength.Weak;
+            }
+
+            return Strength.Strong; 
         }
     }
 

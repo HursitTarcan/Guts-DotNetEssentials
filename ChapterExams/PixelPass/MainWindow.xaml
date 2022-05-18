@@ -10,7 +10,7 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
-                <MenuItem Header="_Open" Name="openItem" />
+                <MenuItem Header="_Open" Name="openItem" Click="openItem_Click"/>
                 <MenuItem Header="_Save" Name="saveItem" IsEnabled="False"/>
                 <Separator />
                 <MenuItem Header="E_xit" Name="exitItem"  />
@@ -20,7 +20,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="38,18,0,0" Text="Accounts:" VerticalAlignment="Top"/>
             <ListBox HorizontalAlignment="Left" Height="157" Margin="38,39,0,0"
                       VerticalAlignment="Top" Width="170"
-                      Name="accountInfoListBox">
+                      Name="accountInfoListBox" SelectionChanged="accountInfoListBox_SelectionChanged">
 
             </ListBox>
             <Button HorizontalAlignment="Left" IsEnabled="False"
@@ -28,7 +28,7 @@
                     Width="30" Height="30"
                     FontSize="24" Padding="0"
                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                    Name="newAccountInfoButton">
+                    Name="newAccountInfoButton" Click="newAccountInfoButton_Click">
                 <TextBlock Text="+" Margin="0,-7,0,0"/>
             </Button>
             <Canvas HorizontalAlignment="Left" Height="158" Margin="254,38,0,0"
@@ -50,7 +50,7 @@
             
             <Button Content="Copy" HorizontalAlignment="Left" Margin="370,106,0,0"
                     VerticalAlignment="Top" Width="75" Name="copyButton"
-                    IsEnabled="False"/>
+                    IsEnabled="False" Click="copyButton_Click"/>
 
             <TextBlock HorizontalAlignment="Left" Margin="370,145,0,0"
                        Name="notesTextBlock" VerticalAlignment="Top" Text="(notes)" Width="184" Height="34"
